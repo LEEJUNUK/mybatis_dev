@@ -1,13 +1,16 @@
 package kr.or.dgit.mybatis_dev;
 
+import java.util.List;
+import java.util.Map;
+
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-
-import kr.or.dgit.mybatis_study.util.MybatisSqlSessionFactory;
+import kr.or.dgit.mybatis_dev.dto.Student;
+import kr.or.dgit.mybatis_dev.util.MybatisSqlSessionFactory;
 
 public class SqlSessionTest {
 
@@ -27,14 +30,20 @@ public class SqlSessionTest {
 	      Assert.assertNotNull(sqlSessionFactory.openSession());
 	   }
 	   
-	   @test void pTestSelectStudentByALLForResultMap(){
+	   @Test void pTestSelectStudentByALLForResultMap(){
 		            Student student = new Student();
 		            student.setStudId(1);
 		            
-		            Student selectStudent = studentService.selectStudentByNoForResultMap(stduent);
+		            Student selectStudent = StudentService.selectStudentByNoForResultMap(stduent);
 		            Assert.asserArrayNull(selectStudent);
 	   }
-	   
+	 
 	  @Test
-	  public void pTestSelectStud
+	  public void pTestSelectStudentByALLForHashMap(){
+		  List<Map<String, Object>> lists = StudentService.select
+ 		  List<Map<String, Object>> emptyLists = StudentService.select
+
+ 		  
+ 		  	
+ 	  }
 }
