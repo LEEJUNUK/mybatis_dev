@@ -6,7 +6,8 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import kr.or.dgit.mybatis_dev.util.MybatisSqlSessionFactory;
+
+import kr.or.dgit.mybatis_study.util.MybatisSqlSessionFactory;
 
 public class SqlSessionTest {
 
@@ -25,4 +26,15 @@ public class SqlSessionTest {
 	   public void test() {
 	      Assert.assertNotNull(sqlSessionFactory.openSession());
 	   }
+	   
+	   @test void pTestSelectStudentByALLForResultMap(){
+		            Student student = new Student();
+		            student.setStudId(1);
+		            
+		            Student selectStudent = studentService.selectStudentByNoForResultMap(stduent);
+		            Assert.asserArrayNull(selectStudent);
+	   }
+	   
+	  @Test
+	  public void pTestSelectStud
 }
