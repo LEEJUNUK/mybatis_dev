@@ -10,7 +10,7 @@ import kr.or.dgit.mybatis_dev.util.MybatisSqlSessionFactory;
 
 public class StudentService {
     public int insertStudentAutoIncrement(Student student){
-    	Logger.debug("insertStudentAutoIncrement()");
+    	Logger.debug("updateStudent()");
      SqlSession sqlSession = MybatisSqlSessionFactory.openSession();
      try {
     	 StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);

@@ -34,8 +34,13 @@ public class SqlSessionTest {
 		            Student student = new Student();
 		            student.setStudId(1);
 		            
+		            
+		            
 		            Student selectStudent = StudentService.selectStudentByNoForResultMap(stduent);
 		            Assert.asserArrayNull(selectStudent);
+
+		            
+		            
 	   }
 	 
 	  @Test
